@@ -21,7 +21,7 @@ from .serializers import DepartmentSerializer, EmployeeSerializer
 class DepartmentViewSet(viewsets.ModelViewSet):
     """
     GET (list/retrieve) for unauthenticated users, 
-    POST/PUT/DELETE for authenticated users.
+    POST/PUT/PATCH/DELETE for authenticated users.
     """
 
     queryset = Department.objects.all()
@@ -32,7 +32,7 @@ class DepartmentViewSet(viewsets.ModelViewSet):
 class EmployeeViewSet(viewsets.ModelViewSet):
     """
     GET (list/retrieve) for unauthenticated users, 
-    POST/PUT/DELETE for authenticated users.
+    POST/PUT/PATCH/DELETE for authenticated users.
     Supports filtering by `department` and `is_active`, and search across
     first_name, last_name, email, and job_title.
     """
